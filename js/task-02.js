@@ -1,8 +1,10 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
 const liEl = document.querySelector('#ingredients');
-console.log(liEl);
 
-const elements = ingredients.map(option => `<li class="item">${option}</li>`).join('');
-console.log(elements);
-liEl.innerHTML = elements;
+const elements = ingredients.map(option => {
+  const createLiEl = document.createElement('li');
+  createLiEl.classList = 'item';
+  createLiEl.textContent = option;
+  liEl.append(createLiEl);
+});

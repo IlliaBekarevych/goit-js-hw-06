@@ -7,8 +7,9 @@ function getRandomHexColor() {
 }
 
 function chengeColorBtn() {
-  spanEl.textContent = getRandomHexColor();
-  bodyEl.style.backgroundColor = getRandomHexColor();
+  const colorEl = getRandomHexColor();
+  spanEl.textContent = colorEl;
+  bodyEl.style.backgroundColor = colorEl;
 }
 
 btnEl.addEventListener('click', chengeColorBtn);
