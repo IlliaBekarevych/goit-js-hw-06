@@ -4,7 +4,8 @@ const liEl = document.querySelector('#ingredients');
 
 const elements = ingredients.map(option => {
   const createLiEl = document.createElement('li');
-  createLiEl.classList = 'item';
+  createLiEl.classList.add('item');
   createLiEl.textContent = option;
-  liEl.append(createLiEl);
+  return createLiEl;
 });
+liEl.append(...elements);
